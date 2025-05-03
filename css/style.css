@@ -1,0 +1,24 @@
+body{
+    background-color:rgb(182, 255, 244);
+}
+.container{
+  background-color:pink;
+  width:200px;
+  margin:20dvh auto;
+  text-align:center;
+  padding:2vh 0vw;
+  border: 25px solid rgb(0, 21, 92);
+
+}
+button{
+    width:5dvw;
+    margin:0 0.2dvw;
+    font-size:20px;
+    background-color:rgb(4, 32, 102);
+    color:rgb(165, 183, 255);
+}
+
+button:disabled{
+    cursor:not-allowed;
+    opacity:0.5;
+}
