@@ -1,17 +1,17 @@
-export const updateCounter=(count,counter,minusBtn,plusBtn)=>{
-    counter.innerText=count
+let count = 0;
 
-    if(count>=10){
-        plusBtn.setAttribute('disabled',true);
+export const getCount = () => count;
+export const resetCount = () => {
+  count = 0;
+};
 
-    }else{
-        plusBtn.removeAttribute('disabled',false);
-    }
+export const updateCounter = (change, counter, minusBtn, plusBtn) => {
+  count += change;
+  if (count < 0) count = 0;
+  if (count > 10) count = 10;
 
-    if(count<=0){
-        minusBtn.setAttribute('disabled',true)
-    }else{
-        minusBtn.removeAttribute('disabled',false)
-    }
+  counter.innerText = String(count);
 
-}
+  plusBtn.disabled = count >= 10;
+  minusBtn.disabled = count <= 0;
+};
