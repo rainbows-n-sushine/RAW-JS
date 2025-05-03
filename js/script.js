@@ -13,7 +13,7 @@ export const counterApp = () => {
     updateCounter(-1, counter, minusBtn, plusBtn);
   });
 
-  // Initialize display
+
   updateCounter(0, counter, minusBtn, plusBtn);
 };
 
