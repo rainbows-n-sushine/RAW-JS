@@ -1,15 +1,13 @@
 import { getCount, resetCount } from '../js/script.js';
 import { updateCounter } from '../js/counterLogic.js';
-import { initCounterApp } from '../js/script.js';
 
 describe('Counter logic', () => {
   let counter, plusBtn, minusBtn;
 
   beforeEach(() => {
-    // Reset state
+ 
     resetCount();
 
-    // Create mock DOM elements
     counter = document.createElement('h1');
     plusBtn = document.createElement('button');
     minusBtn = document.createElement('button');
