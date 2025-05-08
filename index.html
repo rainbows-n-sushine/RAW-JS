@@ -48,10 +48,14 @@
         const response=await fetch(apiUrl+city+`&appid=${apiKey}`)
         var data=await response.json();
         console.log(data)
-        document.querySelector('.city').innerText=data.name
+        document.querySelector(".city").innerText=data.name
         document.querySelector(".temp").innerText=Math.round(data.main.temp)+"°c"
         document.querySelector(".wind").innerText=data.wind.speed+" km/h"
         document.querySelector(".humidity").innerText=data.main.humidity+" %"
+        const weatherCondition=data.weather[0].main.toLowerCase()
+        console.log(weatherCondition)
+        const imageUrl=`./images/${weatherCondition}.png`
+        document.querySelector(".weather-icon").setAttribute('src',imageUrl)
         
     }
     searchButton.addEventListener("click",()=>{
