@@ -54,7 +54,7 @@ body{
     background:#ebfffc;
     color:var(--placeholder);
     font-size:12px;
-    padding:1dvh 3dvw;
+    padding:1dvh 1dvw;
     flex:1;
     margin-right:10px;
     outline:0;
